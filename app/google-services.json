@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "313841130887",
+    "firebase_url": "https://websurvey-5f3ce.firebaseio.com",
+    "project_id": "websurvey-5f3ce",
+    "storage_bucket": "websurvey-5f3ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313841130887:android:4c81799899b232766c0722",
+        "android_client_info": {
+          "package_name": "feri.com.websurvey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "313841130887-9cckiubtccjilc6eqia335kka38bo4e4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "feri.com.websurvey",
+            "certificate_hash": "dbf0033389d6fb58f0595dfc9b4323c377031169"
+          }
+        },
+        {
+          "client_id": "313841130887-19s3c10mchcf24k4h4hh0996h2st2oac.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMmCrQGv5qHdAc9Ugw8RCCavNHa2h7myE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "313841130887-19s3c10mchcf24k4h4hh0996h2st2oac.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

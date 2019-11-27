@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="30dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="23dp">
+
+
+        <TextView
+            android:id="@+id/nama_komoditas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jeruk"
+            android:textColor="@color/colorAccent"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/status"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.807"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/nama_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="nama"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.096"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oleh"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toTopOf="@+id/nama_user"
+            app:layout_constraintStart_toStartOf="@+id/nama_user" />
+
+        <TextView
+            android:id="@+id/harga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Rp 12.000,00"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/nama_user"
+            app:layout_constraintTop_toBottomOf="@+id/nama_user" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harga"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toTopOf="@+id/harga"
+            app:layout_constraintStart_toStartOf="@+id/harga" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="verified"
+            app:layout_constraintBottom_toTopOf="@+id/btn_ver"
+            app:layout_constraintEnd_toEndOf="@+id/nama_komoditas"
+            app:layout_constraintStart_toStartOf="@+id/nama_komoditas"
+            app:layout_constraintTop_toBottomOf="@+id/nama_komoditas" />
+
+        <TextView
+            android:id="@+id/tanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="26/11/2019"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/harga"
+            app:layout_constraintTop_toBottomOf="@+id/harga" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toTopOf="@+id/tanggal"
+            app:layout_constraintStart_toStartOf="@+id/tanggal" />
+
+        <Button
+            android:id="@+id/btn_ver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_rounded"
+            android:padding="8dp"
+            android:text="Verif Sekarang"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/status"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/status"
+            app:layout_constraintTop_toBottomOf="@+id/status"
+            tools:visibility="gone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
