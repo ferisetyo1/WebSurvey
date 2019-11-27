@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WebSurvey</string>
+    <string name="app_name">Survey Komoditas</string>
     <string name="menu_profil">Profil</string>
     <string name="menu_home">Home</string>
     <string name="list_komoditas">List Komoditas</string>

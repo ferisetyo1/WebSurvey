@@ -63,6 +63,11 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
             return
         }
 
+        if (et_password.text.toString().trim().length<6){
+            et_password.error="password tidak boleh kurang dari 6 karakter"
+            return
+        }
+
         if (et_re_password.text.toString().trim().isNullOrEmpty()){
             et_re_password.error="please fill the blank"
             return
