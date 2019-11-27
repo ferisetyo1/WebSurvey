@@ -47,6 +47,16 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun login() {
+        if (et_email.text.isNullOrEmpty()){
+            et_email.error="please fill the blank"
+            return
+        }
+
+        if (et_password.text.isNullOrEmpty()){
+            et_password.error="please fill the blank"
+            return
+        }
+
         mAuth?.signInWithEmailAndPassword(
             et_email.text.toString().trim(),
             et_password.text.toString().trim()
@@ -66,7 +76,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                             startActivity(intent)
                             finish()
                         }?.addOnFailureListener {
-                            Log.w("failed","error update data",it.cause)
+                            Log.w("failed", "error update data", it.cause)
                         }
 
 

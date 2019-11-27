@@ -85,8 +85,8 @@ class MenuListKomoditas : Fragment() {
         val query = FirebaseDatabase.getInstance()
             .getReference("komoditas")
             .orderByChild("nama")
-            .startAt(p0)
-            .endAt(p0 + "\uf8ff");
+            .startAt(p0?.toLowerCase())
+            .endAt(p0?.toLowerCase() + "\uf8ff")
 
         rv_option = FirebaseRecyclerOptions.Builder<KomoditasModel>()
             .setQuery(query, KomoditasModel::class.java!!)

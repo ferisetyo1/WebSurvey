@@ -2,13 +2,14 @@ package feri.com.websurvey
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_create.*
-import java.util.*
+import java.text.ParseException
+import java.text.SimpleDateFormat
+
 
 class CreateActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -28,6 +29,24 @@ class CreateActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun create() {
+        if (et_nama.text.isNullOrEmpty()){
+            et_nama.error="please fill the blank"
+            return
+        }
+        if (et_harga.text.isNullOrEmpty()){
+            et_harga.error="please fill the blank"
+            return
+        }
+        if (et_tanggal.text.isNullOrEmpty()){
+            et_tanggal.error="please fill the blank"
+            return
+        }
+
+        if (!isDateValid(et_tanggal.text.toString().trim())){
+            et_tanggal.error="tanggal tidak valid"
+            return
+        }
+
         var komoditasModel=KomoditasModel(
             id,
             et_nama.text.toString(),
@@ -55,4 +74,15 @@ class CreateActivity : AppCompatActivity(), View.OnClickListener {
         btn_tbh.setOnClickListener(this)
     }
 
+    fun isDateValid(dateStr: String): Boolean {
+        val sdf = SimpleDateFormat("dd/MM/yyyy")
+        sdf.setLenient(false)
+        try {
+            sdf.parse(dateStr)
+        } catch (e: ParseException) {
+            return false
+        }
+
+        return true
+    }
 }
